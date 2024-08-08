@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="assets/Logo.png" alt="Logo de Alura">
+    </header>
+    <main>
+        <section class="seccion_uno">
+            <textarea class="texto_ingresado" cols="30" rows="5" placeholder="Ingrese el texto aquí..."></textarea>
+            <div class="aviso">
+                <p class="texto_aviso">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button class="boton_encriptar">Encriptar</button>
+                <button class="boton_desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="seccion_dos">
+            <div class="texto_devuelto_container">
+                <textarea class="texto_devuelto" cols="20" rows="12" placeholder="Ningún mensaje fue encontrado. Ingresa el texto a encriptar o desencriptar"></textarea>
+                <button class="boton_copiar" style="display: none;">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="pie_de_pagina">
+        <p>Desarrollado por Andrés González</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

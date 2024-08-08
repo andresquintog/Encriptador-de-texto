@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-primario: #F3F5FC;
+    --color-secundario: #0A3871;
+    --color-terciario: #FFFFFF;
+    --color-aviso: #343A40;
+    --fuente-Inter: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--color-primario);
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    line-height: 150%;
+    margin: 0;
+}
+
+header {
+    height: 40px;
+}
+
+.logo {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 290px;
+}
+
+.texto_ingresado {
+    background: none;
+    border: none;
+    color: var(--color-secundario);
+    font-size: 32px;
+    font-family: var(--fuente-Inter);
+    margin-top: 80px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: var(--color-secundario);
+}
+
+.texto_ingresado:focus {
+    outline: none;
+}
+
+.aviso {
+    display: flex;
+    font-size: 12px;
+    background-image: url(/assets/bi_exclamation-circle-fill.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.texto_aviso {
+    margin-left: 25px;
+    margin-bottom: 18px;
+}
+
+.texto_devuelto_container {
+    position: relative;
+}
+
+.texto_devuelto {
+    font-size: 32px;
+    background: var(--color-terciario);
+    background-image: url(/assets/Muñeco.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 32px;
+    color: var(--color-secundario);
+    margin-left: 80px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+}
+
+.texto_devuelto:focus {
+    outline: none;
+}
+
+.boton_copiar {
+    font-size: 16px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-secundario);
+    cursor: pointer;
+    height: 67px;
+    width: 250px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.botones {
+    display: flex;
+    height: 30px;
+    margin: 0;
+}
+
+.boton_encriptar {
+    font-size: 16px;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-terciario);
+    cursor: pointer;
+    height: 67px;
+    width: 250px;
+}
+
+.seccion_dos {
+    align-items: center;
+}
+
+.boton_desencriptar {
+    font-size: 16px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-secundario);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 24px;
+    width: 250px;
+}
+
+.pie_de_pagina {
+    font-family: var(--fuente-Inter);
+    font-size: 16px;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 13px;
+    text-align: center;
+}
+
+/* Media Queries para Tablets */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .texto_ingresado, .texto_devuelto {
+        font-size: 24px;
+        width: 90%;
+    }
+
+    .botones {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .boton_encriptar, .boton_desencriptar {
+        width: 45%;
+        margin: 0 5px;
+    }
+
+    .texto_devuelto {
+        margin-right: 0;
+        padding-bottom: 50px;
+        background-image: none;
+        height: 200px;
+    }
+
+    .boton_copiar {
+        width: 100%;
+        bottom: 20px;
+    }
+}
+
+/* Media Queries para Celulares */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .texto_ingresado, .texto_devuelto {
+        margin-top: 152px;
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .botones {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .boton_encriptar, .boton_desencriptar {
+        width: 343px;
+        margin: 5px;
+        padding: 20px;
+    }
+
+    .texto_devuelto {
+        margin-top: 124px;
+        padding-bottom: 50px;
+        background-image: none;
+        width: 353px;
+        height: 180px;
+    }
+
+    .boton_copiar {
+        width: 100%;
+        bottom: 20px;
+    }
+
+    .aviso {
+        font-size: 10px;
+    }
+}
